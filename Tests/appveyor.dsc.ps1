@@ -1,7 +1,5 @@
 # This script will invoke a DSC configuration
 # This is a simple proof of concept
-# Ideally, you would abstract out your DSC code as used in your organization
-#     and only cover dependencies and the actual push or pull here
 
 "`n`tPerforming DSC Configuration`n"
 

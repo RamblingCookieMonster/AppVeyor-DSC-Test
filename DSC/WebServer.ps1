@@ -1,7 +1,7 @@
 Configuration ContosoWebsite
 {
     param (
-        [string[]]$ComputerName = $ENC:ComputerName
+        [string[]]$ComputerName = $ENV:ComputerName
     )
     Node $ComputerName
     {

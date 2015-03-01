@@ -12,3 +12,5 @@ Caveats:
  * [No reboots](http://help.appveyor.com/discussions/kb/13-machine-restart-during-build).
  * You need to handle dependencies (e.g. download and extract the DSC Resource Kit).
  * This might not be a pristine VM. You get a new VM from AppVeyor, but AppVeyor makes their own changes.
+
+More details in the associated blog post: [Testing DSC Configurations With Pester and AppVeyor](https://ramblingcookiemonster.wordpress.com/2015/03/01/testing-dsc-configurations-with-pester-and-appveyor/)
