@@ -19,4 +19,4 @@ test_script:
 artifacts:
  # Publish the MOF
   - path: $(COMPUTERNAME).mof
-    name: MOF
+  - ps: Push-AppveyorArtifact ".\$ENV:COMPUTERNAME`.mof"
