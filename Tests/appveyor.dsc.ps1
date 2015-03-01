@@ -7,7 +7,8 @@
 
 . .\DSC\WebServer.ps1
 
-ContosoWebsite –COMPUTERNAME $ENV:COMPUTERNAME | Out-Null
+( ContosoWebsite –COMPUTERNAME $ENV:COMPUTERNAME ).FullName |
+    Set-Content -Path .\Artifacts.txt
 
 Start-DscConfiguration .\ContosoWebsite -Wait -Force -verbose
 

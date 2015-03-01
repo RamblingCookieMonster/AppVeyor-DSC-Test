@@ -17,4 +17,4 @@ test_script:
   - ps: . .\Tests\appveyor.pester.ps1 -Test -Finalize
   
 deploy_script:
-  - ps: Push-AppveyorArtifact ".\$ENV:COMPUTERNAME`.mof"
+  - ps: Get-Content .\Artifacts.txt | Foreach-Object { Push-AppveyorArtifact $_ }
