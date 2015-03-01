@@ -6,9 +6,10 @@
 "`n`tPerforming DSC Configuration`n"
 
 . .\DSC\WebServer.ps1
-ContosoWebsite –COMPUTERNAME $ENV:COMPUTERNAME
 
-Start-DscConfiguration .\ContosoWebsite -Wait
+ContosoWebsite –COMPUTERNAME $ENV:COMPUTERNAME | Out-Null
+
+Start-DscConfiguration .\ContosoWebsite -Wait -Force -verbose
 
 
 <#

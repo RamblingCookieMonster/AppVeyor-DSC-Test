@@ -61,12 +61,12 @@ param(
 
                 "FAILED TESTS SUMMARY:`n"
                 $FailedItems | ForEach-Object {
-                    $Test = $_
+                    $Item = $_
                     [pscustomobject]@{
-                        Describe = $Test.Describe
-                        Context = $Test.Context
-                        Name = "It $($Test.Name)"
-                        Result = $Test.Result
+                        Describe = $Item.Describe
+                        Context = $Item.Context
+                        Name = "It $($Item.Name)"
+                        Result = $Item.Result
                     }
                 } |
                     Sort Describe, Context, Name, Result |
