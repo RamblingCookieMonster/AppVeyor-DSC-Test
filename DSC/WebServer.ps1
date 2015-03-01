@@ -17,5 +17,12 @@ Configuration ContosoWebsite
             Ensure = “Present”
             Name = “Web-Asp-Net45”
         }
+        #Install PowerShell AD... for fun...
+        WindowsFeature ASP
+        {
+            Ensure = “Present”
+            Name = “RSAT-AD-PowerShell”
+        }
+
     }
 }

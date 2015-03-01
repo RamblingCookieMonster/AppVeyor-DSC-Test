@@ -22,7 +22,7 @@ param(
         Import-Module Pester
 
         Invoke-Pester -Path "$ProjectRoot\Tests" -OutputFormat NUnitXml -OutputFile "$ProjectRoot\$TestFile" -PassThru |
-            Export-Clixml -Path "$ProjectRoot\PesterResults$PSVersion.xml"
+            Export-Clixml -Path "$ProjectRoot\PesterResultsPS$PSVersion.xml"
     }
 
 #If finalize is specified, check for failures and 
@@ -46,7 +46,7 @@ param(
             }
 
         #What failed?
-            $Results = @( Get-ChildItem -Path "$ProjectRoot\PesterResults*.xml" | Import-Clixml )
+            $Results = @( Get-ChildItem -Path "$ProjectRoot\PesterResultsPS*.xml" | Import-Clixml )
             
             $FailedCount = $Results |
                 Select -ExpandProperty FailedCount |
